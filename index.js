@@ -7,7 +7,6 @@ for (let i = 0; i < 12; i++) {
     node.classList.add("grid-cell");
     node.id = j.toString() + "," + i.toString();
     console.log(node.id);
-    node.innerHTML = node.id;
     globalGrid.appendChild(node);
   }
 }
