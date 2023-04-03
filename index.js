@@ -29,7 +29,7 @@ selector.style.width = 100;
 
 function isValid(x, y, fileSrcInput){
   if(document.getElementById(x.toString()+","+y.toString()+"img").style.visibility == "visible" &&
-  document.getElementById(x.toString()+","+y.toString()+"img").src.contains(fileSrcInput)){
+  document.getElementById(x.toString()+","+y.toString()+"img").src.includes(fileSrcInput)){
     return true;
   }
   else{
@@ -178,7 +178,7 @@ document.addEventListener("keydown", function (event) {
         // document.getElementById(
         //   xpos.toString() + "," + i.toString() + "img"
         // ).src = red.src;
-        if (selector.src.contains("yellow")) {
+        if (selector.src.includes("yellow")) {
           document.getElementById(
             xpos.toString() + "," + i.toString() + "img"
           ).src = "red.png";
