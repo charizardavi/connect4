@@ -29,7 +29,7 @@ selector.style.width = 100;
 
 function isValid(x, y, fileSrcInput){
   if(document.getElementById(x.toString()+","+y.toString()+"img").style.visibility == "visible" &&
-  document.getElementById(x.toString()+","+y.toString()+"img").src == fileSrcInput){
+  document.getElementById(x.toString()+","+y.toString()+"img").src.contains(fileSrcInput)){
     return true;
   }
   else{
@@ -178,7 +178,7 @@ document.addEventListener("keydown", function (event) {
         // document.getElementById(
         //   xpos.toString() + "," + i.toString() + "img"
         // ).src = red.src;
-        if (selector.src == "file:///C:/dev/csc/connect4/yellow.png") {
+        if (selector.src.contains("yellow")) {
           document.getElementById(
             xpos.toString() + "," + i.toString() + "img"
           ).src = "red.png";
@@ -190,10 +190,10 @@ document.addEventListener("keydown", function (event) {
         break;
       }
     }
-    if (checkWin("file:///C:/dev/csc/connect4/red.png") == true){
+    if (checkWin("red.png") == true){
       window.location.replace("red_win.html");
     }
-    else if (checkWin("file:///C:/dev/csc/connect4/yellow.png") == true){
+    else if (checkWin("yellow.png") == true){
       window.location.replace("yellow_win.html");
     }
 
